@@ -1,29 +1,24 @@
 package br.com.desafio.dominio;
 
+import lombok.*;
+
 import java.time.LocalDate;
 
-public class Mentoria extends Conteudo{
+public class Mentoria extends Conteudo {
 
     public Mentoria() {
     }
 
-
+    @Getter
+    @Setter
     private LocalDate data;
 
     @Override
     public Double calcularXP() {
-        return XP_PADRAO +20d;
+        return XP_PADRAO + 20d;
     }
 
 
-
-    public LocalDate getData() {
-        return data;
-    }
-
-    public void setData(LocalDate data) {
-        this.data = data;
-    }
 
     @Override
     public String toString() {
